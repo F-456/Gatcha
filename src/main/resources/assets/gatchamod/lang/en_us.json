@@ -1,1 +1,3 @@
-{"item.gatchamod.luckyball":"Lucky Ball"}
+{"item.gatchamod.luckyball":"Lucky Ball",
+  "message.gatchamod.won_prize": "Congrats! you have won %s",
+  "message.gatchamod.winnothing": "Unlucky, try again"}
