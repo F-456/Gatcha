@@ -23,15 +23,24 @@ public class LuckyballItem extends Item {
                     Items.GOLD_INGOT,
                     Items.SLIME_BLOCK,
                     Items.IRON_INGOT,
+                    Items.LEATHER,
             };
         //randomize the item list
             // creating instance for random class
         Random rand = new Random();
         int randoming_limit = possibleitems.length+1;
         int choosen_int = rand.nextInt(randoming_limit);
+            // Consume the item used
+            ItemStack itemInHand = player.getItemInHand(hand);
+            itemInHand.shrink(1); // Reduce the item count by 1
+
+            // If the item count is 0, set it to air (remove it)
+            if (itemInHand.isEmpty()) {
+                player.setItemInHand(hand, ItemStack.EMPTY);
+            }
 
         if (choosen_int == possibleitems.length){
-            player.sendSystemMessage(Component.literal("Unlucky! No item is drawed"));
+            player.sendSystemMessage(Component.translatable("message.gatchamod.winnothing"));
             }
         else{
             //using next int for randomize number between a range
@@ -39,11 +48,12 @@ public class LuckyballItem extends Item {
             //Giving player award
             ItemStack rewardStack = new ItemStack(randomItem,1);
             String Itemname = randomItem.getDescription().getString();
-            player.sendSystemMessage(Component.literal("Congrat! You have won a "+Itemname));
+            player.sendSystemMessage(Component.translatable("message.gatchamod.won_prize",Itemname));
             if (!player.addItem(rewardStack)){
                 //dropping the item if the player inventory is full
                 player.drop(rewardStack,false);
             }
+
 
         };
         }
