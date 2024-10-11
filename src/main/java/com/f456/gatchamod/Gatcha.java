@@ -1,5 +1,6 @@
 package com.f456.gatchamod;
 
+import com.f456.gatchamod.config.GatchaModCommonConfigs;
 import com.f456.gatchamod.item.Moditems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -38,7 +39,7 @@ public class Gatcha {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GatchaModCommonConfigs.CONFIG,"GatchaCommonConfig_level1.toml");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
