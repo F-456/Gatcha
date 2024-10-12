@@ -13,9 +13,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class Luckyball_Item1 extends Item {
+public class Luckyball_Item3 extends Item {
 
-    public Luckyball_Item1(Properties pProperties) {
+    public Luckyball_Item3(Properties pProperties) {
         super(pProperties);
     }
 
@@ -23,15 +23,15 @@ public class Luckyball_Item1 extends Item {
     // if right click is used on the item
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
         if (!world.isClientSide){
-
+            
             // Play the sound effect
-            world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 1.0F, 1.0F);
+            world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.EXPERIENCE_ORB_PICKUP  , SoundSource.PLAYERS, 1.0F, 1.0F);
 
             //getting item from the mod config
-            String item1Name = GatchaModCommonConfigs.VALUES.item1.get();
-            String item2Name = GatchaModCommonConfigs.VALUES.item2.get();
-            String item3Name = GatchaModCommonConfigs.VALUES.item3.get();
-            String item4Name = GatchaModCommonConfigs.VALUES.item4.get();
+            String item1Name = GatchaModCommonConfigs.VALUES.item9.get();
+            String item2Name = GatchaModCommonConfigs.VALUES.item10.get();
+            String item3Name = GatchaModCommonConfigs.VALUES.item11.get();
+            String item4Name = GatchaModCommonConfigs.VALUES.item12.get();
 
             //converting string from config into usable item objects
             Item item1 = BuiltInRegistries.ITEM.get(new ResourceLocation(item1Name));
@@ -44,6 +44,8 @@ public class Luckyball_Item1 extends Item {
             };
 
             Item randomItem = null;
+
+
         //randomize the item list
         //choosing a integer between 0 and 100
         int choosen_int = (int)(Math.random()*101);

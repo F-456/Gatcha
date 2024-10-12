@@ -1,5 +1,7 @@
 {
   "item.gatchamod.luckyball":"初級扭蛋",
+  "item.gatchamod.luckyball2":"中級扭蛋",
+  "item.gatchamod.luckyball3":"高級扭蛋",
   "message.gatchamod.won_prize":"你贏得了 %s",
   "message.gatchamod.winnothing":"可憐啊，下次一定"
 }

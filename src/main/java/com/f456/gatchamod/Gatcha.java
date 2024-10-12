@@ -39,7 +39,7 @@ public class Gatcha {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GatchaModCommonConfigs.CONFIG,"GatchaCommonConfig_level1.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GatchaModCommonConfigs.CONFIG,"GatchaCommonConfig.toml");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -50,6 +50,8 @@ public class Gatcha {
         // added luckyball to creativemode
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(Moditems.LUCKYBALL);
+            event.accept(Moditems.LUCKYBALL2);
+            event.accept(Moditems.LUCKYBALL3);
         }
     }
 
