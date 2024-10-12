@@ -26,7 +26,15 @@ public class ModEvents {
             trades.get(2).add((pTrader,pRandom)-> new MerchantOffer(
                     new ItemStack(Items.EMERALD,1),
                     new ItemStack(Moditems.LUCKYBALL.get(),1),
-                    12,6,0.02f));
+                    15,6,0.02f));
+            trades.get(3).add((pTrader,pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD,3),
+                    new ItemStack(Moditems.LUCKYBALL2.get(),1),
+                    12,10,0.02f));
+            trades.get(5).add((pTrader,pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD,5),
+                    new ItemStack(Moditems.LUCKYBALL3.get(),1),
+                    12,15,0.02f));
 
         }
 

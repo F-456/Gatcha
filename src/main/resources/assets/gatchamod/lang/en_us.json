@@ -1,3 +1,5 @@
-{"item.gatchamod.luckyball":"Lucky Ball",
+{"item.gatchamod.luckyball":"Lucky Ball lv1",
+  "item.gatchamod.luckyball2":"Lucky Ball lv2",
+  "item.gatchamod.luckyball3":"Lucky Ball lv3",
   "message.gatchamod.won_prize": "Congrats! you have won %s",
   "message.gatchamod.winnothing": "Unlucky, try again"}
