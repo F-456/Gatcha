@@ -57,23 +57,24 @@ public class Luckyball_Item2 extends Item {
             if (itemInHand.isEmpty()) {
                 player.setItemInHand(hand, ItemStack.EMPTY);
             }
-        // deciding the probability of getting the grades of prizes
-        if (choosen_int < 20){
-            player.sendSystemMessage(Component.translatable("message.gatchamod.winnothing"));
+            // deciding the probability of getting the grades of prizes
+            // 10% of getting nothing
+            if (choosen_int < 10){
+                player.sendSystemMessage(Component.translatable("message.gatchamod.winnothing"));
             }
-            //lowest rank of reward 35% probability
+            //lowest rank of reward 45% probability
             else if (choosen_int<55 ) {
                 randomItem = possibleitems[3];
             }
-            //third rank of reward  20% probability
-            else if(choosen_int<75) {
+            //third rank of reward  30% probability
+            else if(choosen_int<85) {
                 randomItem = possibleitems[2];
             }
-            //second rank of reward  15% probability
-            else if(choosen_int<90) {
+            //second rank of reward  10% probability
+            else if(choosen_int<95) {
                 randomItem = possibleitems[1];
             } else {
-                // left highest reward 10% probability
+                // highest reward 5% probability
                 randomItem = possibleitems[0];
             }
 

@@ -1,5 +1,7 @@
-{"item.gatchamod.luckyball":"Lucky Ball lv1",
-  "item.gatchamod.luckyball2":"Lucky Ball lv2",
-  "item.gatchamod.luckyball3":"Lucky Ball lv3",
+{"item.gatchamod.luckyball":"Lucky Ball-common",
+  "item.gatchamod.luckyball2":"Lucky Ball-rare",
+  "item.gatchamod.luckyball3":"Lucky Ball-legendary",
+  "item.gatchamod.luckyball_logo":"LuckyBall-logo",
+  "creativetab.gatcha_tab": "Gatcha",
   "message.gatchamod.won_prize": "Congrats! you have won %s",
   "message.gatchamod.winnothing": "Unlucky, try again"}
