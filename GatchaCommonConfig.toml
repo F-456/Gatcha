@@ -1,0 +1,35 @@
+
+["Custom Gacha Items 10 % of getting nothing "]
+	#Item 1 to 4 name settings for luckyball common, use a proper id for item
+	# Be cautious, item probability is non editable
+	#5% item
+	item1 = "minecraft:name_tag"
+	#10% item
+	item2 = "minecraft:slime_ball"
+	#30% item
+	item3 = "minecraft:iron_ingot"
+	#45% item
+	item4 = "minecraft:coal"
+	#
+	#[luckyball rare  -------------------------------------------------------]
+	#
+	#5% item
+	item5 = "minecraft:diamond"
+	#10% item
+	item6 = "minecraft:blaze_powder"
+	#30% item
+	item7 = "minecraft:gold_ingot"
+	#45% item
+	item8 = "minecraft:leather"
+	#
+	#[luckyball legendary  -------------------------------------------------------]
+	#
+	#5% item
+	item9 = "minecraft:netherite_scrap"
+	#10% item
+	item10 = "minecraft:ender_pearl"
+	#30% item
+	item11 = "minecraft:redstone"
+	#45% item
+	item12 = "minecraft:lapis_lazuli"
+
