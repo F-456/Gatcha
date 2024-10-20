@@ -15,6 +15,9 @@ public class Moditems {
             ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Gatcha.MOD_ID);
 
     //importing luckyball item function from the custom packages
+    public static final RegistryObject<Item> LUCKYBALL_LOGO = ITEMS.register("luckyballtab",
+            ()-> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> LUCKYBALL = ITEMS.register("luckyball",
         ()-> new Luckyball_Item1(new Item.Properties()));
 

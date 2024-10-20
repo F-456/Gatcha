@@ -1,6 +1,7 @@
 package com.f456.gatchamod;
 
 import com.f456.gatchamod.config.GatchaModCommonConfigs;
+import com.f456.gatchamod.item.GatchaTab;
 import com.f456.gatchamod.item.Moditems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -35,8 +36,9 @@ public class Gatcha {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         Moditems.register(modEventBus);
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+
+        //Register the custom creative tab
+        GatchaTab.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GatchaModCommonConfigs.CONFIG,"GatchaCommonConfig.toml");
@@ -45,15 +47,6 @@ public class Gatcha {
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        // added luckyball to creativemode
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(Moditems.LUCKYBALL);
-            event.accept(Moditems.LUCKYBALL2);
-            event.accept(Moditems.LUCKYBALL3);
-        }
-    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
